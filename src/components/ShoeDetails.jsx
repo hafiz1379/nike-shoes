@@ -6,8 +6,9 @@ function ShoeDetails() {
     <div className="flex flex-col lg:flex-row-reverse space-y-4">
 
         {/* Shoe Image */}
-      <div className="flex-1 ">
-        <div className='bg-gradient-to-br from-[#F636CF] via-[#E3D876] to-[#4DD4C6]'>
+      <div className="flex-1 lg:-mt-32 lg:ml-28">
+        <div className='flex justify-center items-center h-full
+        bg-gradient-to-br from-[#F636CF] via-[#E3D876] to-[#4DD4C6]'>
         <img src={Nike1} alt="" />
         </div>
       </div>
