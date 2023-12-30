@@ -1,16 +1,55 @@
 /* eslint-disable */
-import { RxHamburgerMenu } from 'react-icons/rx';
-import { ReactComponent as NikeLogo } from '../assets/nike-logo.svg';
+import { TbShoppingBag } from "react-icons/tb";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { ReactComponent as NikeLogo } from "../assets/nike-logo.svg";
+import { useState } from "react";
+
+const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 
 function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex flex-wrap justify-between items-center">
+      {/* Logo */}
       <a href="/" aria-label="Home">
         <NikeLogo className="h-20 w-20" />
       </a>
-      <button type="button" className="focus:ring-2 focus:ring-gray-200 p-2 rounded-lg">
+
+      {/* Hamburger Menu */}
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        type="button"
+        className="lg:hidden focus:ring-2 focus:ring-gray-200 p-2 rounded-lg"
+      >
         <RxHamburgerMenu size={25} />
       </button>
+
+      {/* Menu List */}
+      <div className={`${!isMenuOpen && "hidden"} w-full lg:w-auto lg:block`}>
+        <ul className="bg-gray-50 lg:space-x-8 lg:bg-transparent lg:border-none text-lg border border-gray-100 rounded-lg p-4 flex flex-col lg:flex-row">
+          {ROUTES.map((route, i) => {
+            return (
+              <li
+                className={`py-2 px-3 cursor-pointer rounded ${
+                  i === 0
+                    ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-600"
+                    : "hover:bg-slate-100"
+                }`}
+                key={route}
+              >
+                {route}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      {/* Cart Button */}
+      <div className="fixed left-4 bottom-4 lg:static">
+        <div className="h-12 w-12 flex justify-center items-center rounded-full bg-white shadow-md">
+          <TbShoppingBag />
+        </div>
+      </div>
     </nav>
   );
 }
