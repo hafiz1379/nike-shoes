@@ -9,7 +9,7 @@ const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="flex flex-wrap justify-between items-center">
+    <nav className="z-10 relative flex flex-wrap justify-between items-center">
       {/* Logo */}
       <a href="/" aria-label="Home">
         <NikeLogo className="h-20 w-20" />
@@ -30,11 +30,11 @@ function Nav() {
           {ROUTES.map((route, i) => {
             return (
               <li
-                className={`py-2 px-3 cursor-pointer rounded ${
+                className={`lg:hover:bg-transparent lg:hover:text-blue-700 py-2 px-3 cursor-pointer rounded ${
                   i === 0
                     ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-600"
                     : "hover:bg-slate-100"
-                }`}
+                } ${(i === 3 || i === 4) && "lg:text-white"}`}
                 key={route}
               >
                 {route}
@@ -46,7 +46,7 @@ function Nav() {
 
       {/* Cart Button */}
       <div className="fixed left-4 bottom-4 lg:static">
-        <div className="h-12 w-12 flex justify-center items-center rounded-full bg-white shadow-md">
+        <div className="h-12 w-12 cursor-pointer flex justify-center items-center rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>
       </div>
