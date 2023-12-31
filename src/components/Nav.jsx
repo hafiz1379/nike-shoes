@@ -45,7 +45,7 @@ function Nav() {
       </div>
 
       {/* Cart Button */}
-      <div className="fixed left-4 bottom-4 lg:static">
+      <div className="transition active:scale-75 fixed left-4 bottom-4 lg:static">
         <div className="h-12 w-12 cursor-pointer flex justify-center items-center rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>
