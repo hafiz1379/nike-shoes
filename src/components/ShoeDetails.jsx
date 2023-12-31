@@ -12,7 +12,7 @@ function ShoeDetails() {
           className="flex justify-center items-center h-full
         bg-gradient-to-br from-[#F636CF] via-[#E3D876] to-[#4DD4C6]"
         >
-          <img src={Nike1} alt="" />
+          <img src={Nike1} alt="" className="animate-float"/>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ function ShoeDetails() {
 
         {/* Shoe button and link */}
         <div className="space-x-10">
-          <button className="h-14 w-44 bg-black text-white hover:bg-gray-800 active:bg-gray-500">
+          <button className="transition active:scale-75 h-14 w-44 bg-black text-white hover:bg-gray-800 active:bg-gray-500">
             Add to bag
           </button>
           <a
