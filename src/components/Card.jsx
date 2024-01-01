@@ -2,14 +2,20 @@
 
 function Card({ item }) {
   return (
-    <div className={`${item.className} transition transform hover:scale-105 max-w-xl`}>
+    <div
+      className={`${item.className} max-w-xl transform cursor-pointer transition hover:scale-105`}
+    >
       <div className="p-8">
-        <div className="text-2xl font-bold">{item.name}</div>
-        <div className="underline underline-offset-4 font-semibold mt-10">SHOP NOW +</div>
+        <div className="text-2xl font-bold">{item.title}</div>
+        <div className="mt-10 font-semibold underline underline-offset-4">
+          SHOP NOW +
+        </div>
       </div>
-      <img className="absolute left-[40%] top-5 w-56 h-40" src={item.srs} alt="" />
+      <img
+        className="absolute left-[50%] top-5 h-40"
+        src={item.src}
+      />
     </div>
   );
 }
-
 export default Card;
