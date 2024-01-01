@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 
-function Nav() {
+function Nav({onClickShoppingBtn}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="z-10 relative flex flex-wrap justify-between items-center">
@@ -45,7 +45,7 @@ function Nav() {
       </div>
 
       {/* Cart Button */}
-      <div className="transition active:scale-75 fixed left-4 bottom-4 lg:static">
+      <div onClick={onClickShoppingBtn} className="transition active:scale-75 fixed left-4 bottom-4 lg:static">
         <div className="h-12 w-12 cursor-pointer flex justify-center items-center rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>
