@@ -13,7 +13,7 @@ export const SHOE_LIST = [
     name: 'Nike Air Max 270',
     description:
       'The Nike Air Max 270 is inspired by two icons of big Air: the Air Max 180 and Air Max 93.',
-    srs: nike1,
+    src: nike1,
     price: '160',
     className: 'bg-[#EEFFA4]',
   },
@@ -22,7 +22,7 @@ export const SHOE_LIST = [
     name: 'Nike Air Vapor 270',
     description:
       'The Nike Air Max 270 is inspired by two icons of big Air: the Air Max 180 and Air Max 93.',
-    srs: nike2,
+    src: nike2,
     price: '100',
     className: 'bg-[#DDCEFD]',
   },
@@ -31,7 +31,7 @@ export const SHOE_LIST = [
     name: 'Nike Air Max 2090',
     description:
       'The Nike Air Max 270 is inspired by two icons of big Air: the Air Max 180 and Air Max 93.',
-    srs: nike3,
+    src: nike3,
     price: '160',
     className: 'bg-[#DAFFA2]',
   },
@@ -40,7 +40,7 @@ export const SHOE_LIST = [
     name: 'Nike Air Max 270',
     description:
       'The Nike Air Max 270 is inspired by two icons of big Air: the Air Max 180 and Air Max 93.',
-    srs: nike4,
+    src: nike4,
     price: '160',
     className: 'bg-[#A4C6FF]',
   },
