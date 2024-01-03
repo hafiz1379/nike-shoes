@@ -17,11 +17,10 @@ function ShoeDetails() {
       </div>
 
       {/* Shoe Details */}
-      <div className="flex-1 space-y-6">
-        <h1 className="text-5xl font-bold md:text-9xl ">Nike Air Max 270</h1>
+      <div className="flex-1 space-y-5">
+        <h1 className="text-5xl font-bold md:text-8xl ">Nike Air Max 270</h1>
         <p className="font-medium md:text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          quod vel asperiores quo culpa ad recusandae quaerat nihil facere.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </p>
         <div className="flex space-x-6 ">
           <p className="text-3xl font-extrabold md:text-6xl">100$</p>
