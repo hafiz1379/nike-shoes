@@ -6,27 +6,28 @@ import { useState } from "react";
 
 const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 
-function Nav({onClickShoppingBtn}) {
+function Nav({ onClickShoppingBtn }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="z-10 relative flex flex-wrap justify-between items-center">
+    <nav className="z-10 relative flex flex-wrap justify-between items-center ">
       {/* Logo */}
       <a href="/" aria-label="Home">
-        <NikeLogo className="h-20 w-20" />
+        <NikeLogo className="h-20 w-20 dark:fill-white" />
       </a>
 
       {/* Hamburger Menu */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         type="button"
-        className="lg:hidden focus:ring-2 focus:ring-gray-200 p-2 rounded-lg"
+        className="lg:hidden focus:ring-2 focus:ring-gray-200 p-2 rounded-lg 
+        dark:text-gray-400 hover:dark:text-gray-600"
       >
         <RxHamburgerMenu size={25} />
       </button>
 
       {/* Menu List */}
       <div className={`${!isMenuOpen && "hidden"} w-full lg:w-auto lg:block`}>
-        <ul className="bg-gray-50 lg:space-x-8 lg:bg-transparent lg:border-none text-lg border border-gray-100 rounded-lg p-4 flex flex-col lg:flex-row">
+        <ul className="bg-gray-50 lg:space-x-8 lg:bg-transparent lg:border-none text-lg border border-gray-100 rounded-lg p-4 flex flex-col lg:flex-row lg:dark:text-white">
           {ROUTES.map((route, i) => {
             return (
               <li
@@ -45,7 +46,10 @@ function Nav({onClickShoppingBtn}) {
       </div>
 
       {/* Cart Button */}
-      <div onClick={onClickShoppingBtn} className="transition active:scale-75 fixed left-4 bottom-4 lg:static">
+      <div
+        onClick={onClickShoppingBtn}
+        className="transition active:scale-75 fixed left-4 bottom-4 lg:static"
+      >
         <div className="h-12 w-12 cursor-pointer flex justify-center items-center rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>
